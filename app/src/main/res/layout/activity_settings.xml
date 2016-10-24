@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zero.zerobyte.SettingsActivity"
+    android:background="#ffffff" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="INTERNET PACKAGE SETTINGS"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="#3599C0"
+                android:layout_marginTop="10dp"
+                android:id="@+id/title"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Reset Date and Time"
+                android:id="@+id/title1"
+                android:textStyle="italic|bold"
+                android:textSize="20dp"
+                android:textColor="#3599C0"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/title"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resetDate"
+                android:hint="Reset date of internet package"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="date"
+                android:layout_below="@+id/title1"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/resetTime"
+                android:hint="Reset time of internet package"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:focusable="false"
+                android:inputType="time"
+                android:layout_below="@+id/resetDate"
+                android:gravity="center_horizontal"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Update "
+                android:id="@+id/update1"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:background="#7BC3DC"
+                android:layout_below="@+id/resetTime"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Data Capacity"
+                android:id="@+id/title2"
+                android:textStyle="italic|bold"
+                android:textSize="20dp"
+                android:textColor="#3599C0"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/update1"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/totalData"
+                android:hint="Monthly internet quota in mb(Ex:3072)"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:inputType="numberDecimal"
+                android:layout_below="@+id/title2"
+                android:layout_centerHorizontal="true" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/remainingData"
+                android:hint="Remaining quota in mb(Ex:2138)"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:inputType="numberDecimal"
+                android:layout_below="@+id/totalData"
+                android:layout_centerHorizontal="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Update "
+                android:id="@+id/update2"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:background="#7BC3DC"
+                android:layout_below="@+id/remainingData"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClick1" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" START WORKING "
+                android:id="@+id/activate"
+                android:textSize="18dp"
+                android:textColor="#3599C0"
+                android:background="#7BC3DC"
+                android:visibility="gone"
+                android:layout_below="@+id/update2"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="30dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="onClick2" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
